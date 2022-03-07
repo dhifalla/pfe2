@@ -1,0 +1,58 @@
+<div class="container">
+	<div class=" ">
+	  <div class="col-md-4 border-right">
+	
+		
+	
+		
+
+	  </div>
+	  <div class="col-md-8">
+		<div class="settings-tray">
+			<div class="friend-drawer no-gutters friend-drawer--grey">
+			<img class="profile-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0z5jVjAIljS5FIf6yJJ0HQTyPfJn_NlV4tw&usqp=CAU" alt="">
+			<div class="text">
+			  <h6>{{reciver}}</h6>
+			
+			</div>
+		
+		  </div>
+		</div>
+		<div class="chat-panel">
+      <div class="messages_list">
+        <div class="chatbox__messages" *ngFor="let msg of messageList" [ngClass]="{mine: msg.mine}">
+		  <div class="row no-gutters">
+			<div class="col-md-3">
+			  <div class="chat-bubble chat-bubble--left">
+        
+              <div class="user-message">
+                <div class="message-box">
+                  <p class="name">{{ msg.userName }}</p>
+                  <br/>
+                  <p class="message">{{ msg.message }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+			  </div>
+			</div>
+		  </div>
+		 
+		 
+		
+		 
+		  
+		  <div class="row">
+			<div class="col-12">
+			  <div class="chat-box-tray">
+			
+				<input type="text" placeholder="Type your message here..."  [(ngModel)]="message">
+			  
+				<i class="material-icons" (click)="sendMessage()">send</i>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
